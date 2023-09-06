@@ -1,0 +1,22 @@
+.chapter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Adjust as needed to control alignment */
+    flex-direction: row; /* Display data cards in rows */
+  }
+  
+  .chapter-card {
+    flex-basis: calc(33.33% - 20px); /* Adjust as needed to control the number of cards per row and spacing */
+    margin: 10px; /* Adjust as needed for spacing */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none; /* Remove the default link underline */
+    color: #333; /* Set the link text color */
+    display: block; /* Ensure the entire card area is clickable */
+    transition: transform 0.2s; /* Add a smooth transition on hover */
+  }
+
+  
