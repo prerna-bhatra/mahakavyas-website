@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
+import { SayButton } from 'react-say';
 
 
 import './chapter.css'
@@ -40,7 +41,7 @@ const Chapter = () => {
     console.log({ data });
 
     const handleListen = (chapterContent) => {
-       
+
 
     }
 
@@ -49,13 +50,29 @@ const Chapter = () => {
     }
 
     const handleStop = (id) => {
-        
+
 
     }
 
     const handleResume = (id) => {
 
     }
+
+    const copyContent = (textContent) => {
+
+        const contentToCopy = textContent;
+
+        navigator.clipboard.writeText(contentToCopy)
+            .then(() => {
+                // console.log('Content copied to clipboard:', contentToCopy);
+                alert("Text copied to clipboad")
+            })
+            .catch((err) => {
+                console.error('Error copying content to clipboard:', err);
+            });
+        // }
+    };
+
 
     return (
         <div className="chapter">
@@ -67,10 +84,11 @@ const Chapter = () => {
                         <div className="chapter-card" key={item.puranId}>
                             <h2>अध्याय {index + 1} : {item.title}</h2>
                             <div className="button-container">
-                                <button onClick={() => handleListen(item.content)}>Listen</button>
-                                <button onClick={() => handlePause(item.content)}>Pause</button>
+                                <button onClick={() => copyContent(item.content)}>Copy</button>
+                                <button onClick={() => handleListen(item.content)}>Audio</button>
+                                {/* <button onClick={() => handlePause(item.content)}>Pause</button>
                                 <button onClick={() => handleResume(item.content)}>Resume</button>
-                                <button onClick={() => handleStop(item.content)}>Stop</button>
+                                <button onClick={() => handleStop(item.content)}>Stop</button> */}
 
                             </div>
                             <p>{item.content}</p>
@@ -82,4 +100,10 @@ const Chapter = () => {
     );
 };
 
+ {/* <SayButton
+                                    onClick={event => console.log(event)}
+                                    speak="A quick brown fox jumped over the lazy dogs."
+                                >
+                                    Tell me a story
+                                </SayButton> */}
 export default Chapter;

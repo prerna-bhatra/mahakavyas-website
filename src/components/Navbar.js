@@ -17,9 +17,9 @@ const Navbar = () => {
         <li className="nav-item">
           <Link to="/contact">Contact</Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link to="/new-controller">New Controller</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
