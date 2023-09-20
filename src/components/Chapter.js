@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { SayButton } from 'react-say';
 
-
 import './chapter.css'
 
 const Chapter = () => {

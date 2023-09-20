@@ -1,0 +1,61 @@
+.story-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.story-list {
+    flex-grow: 1;
+    max-width: 30%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color:#f5e3cc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+
+}
+
+.book-page {
+    background-color: #f5e3cc;; /* Background color for the book content */
+    padding: 20px; /* Padding around the book content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    border: 1px solid #ccc; /* Add a border around the book content */
+  }
+
+.selected-story {
+    padding: 20px 20px 20px 20px;
+    max-width: 70%;
+    flex-grow: 1;
+    margin-right: 40px;
+}
+
+.book-page p {
+    margin: 0 0 10px; /* Add spacing between paragraphs */
+  }
+  
+
+.story-list h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.story-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.story-list li {
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.story-list li:hover {
+    background-color: #007bff;
+    color: #fff;
+}

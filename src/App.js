@@ -4,6 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import './App.css';
 import Chapter from './components/Chapter';
+import Stories from './components/Stories';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/chapter/:id" element={<Chapter />} />
+          <Route path="/stories" element={<Stories />} />
         </Routes>
       </Router>
     </div>
